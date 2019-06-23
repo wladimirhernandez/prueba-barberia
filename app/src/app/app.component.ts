@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PostService } from './services/post.service'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'prueba-barberia';
+
+  constructor( private _PostService: PostService ){
+
+  }
+
+  getPost(){
+    this._PostService
+    .All()
+      .then(res => {
+        console.log(res)
+      })  
+  }
+
 }

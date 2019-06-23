@@ -1,21 +1,96 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="bg-light">
+<nav class="navbar d-flex justify-content-between col-lg-12 navbar-expand-lg navbar-light bg-white shadow-sm">
+ <div class="container">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4 text-center d-flex justify-content-between">
+    <div class="col-1">
+    </div>
+    <a class="navbar-brand col-10 mr-0" href="#"><h2 class="mb-0">Domicilios Test</h2></a>
+    <button class="navbar-toggler border-0 col-2" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon text-dark"></span>
+    </button>
+  </div>
+  <div class="col-lg-4" class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav  ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><h5 class="mb-0 font-weight-light">Hola! Juan</h5></a>
+      </li>
+    </ul>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+</nav>
+<div class="py-5 container">
+    <div class="card my-5">
+        <textarea class="form-control main-inpt py-3 border-0" id="exampleTextarea" rows="1" placeholder="Escribe tu estado acá"></textarea>        <hr class="m-0 p-0">
+        <div class="my-3 container d-md-flex justify-content-end d-none d-md-block">
+            <button class="btn btn-success col-lg-2 col-md-4">Publicar</button>
+        </div>
+      </div>
+      <div class="card my-5">
+          <div class="d-flex container py-3">
+            <div>
+              <img src="../assets/img/avatar placeholder-8.png" alt="avatar">
+            </div>
+            <div class="ml-lg-4 ml-3">
+              <h4 class="mb-0 text-success">Juan Rodriguez</h4>
+              <small class="text-muted">Hace 40 minutos</small>
+              <p class="pt-3 pr-lg-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima ea, corporis quaerat eos velit laudantium dolorem saepe animi dolore dolorum provident cum vitae. Totam rerum in tenetur consequuntur repudiandae reprehenderit.</p>
+            </div>
+          </div>
+          <hr class="m-0 p-0">
+          <div class="py-3 container d-flex justify-content-between">
+              <div></div>
+              <p class="mb-0 text-muted">3 Comentarios</p>
+            </div>
+            <hr class="m-0 p-0">
+
+            <div class="d-block d-md-none">
+              <button type="button" class="btn btn-outline-success btn-lg col-6 border-light">Reaccionar</button>
+              <button type="button" class="btn btn-outline-success btn-lg col-6 border-light">Comentar</button>
+            </div>
+            <div class="container bg-light py-3">
+                <div class="d-flex container py-2">
+                    <div>
+                      <img src="../assets/img/avatar placeholder-7.png" alt="avatar">
+                    </div>
+                    <div class="ml-lg-4 ml-3">
+                      <div class="d-flex">
+                      <p class="mb-0 text-success mr-3 font-weight-bold">Elena</p> 
+                      <p class="pr-lg-5 mb-0">Lorem ipsum dolor sit amet.</p>
+                      </div>
+                      <small class="m-0 p-0 text-muted">Hace 40 minutos</small>
+                    </div>
+                  </div>
+                      <div class="d-flex container py-2">
+                          <div>
+                            <img src="../assets/img/avatar placeholder-7.png" alt="avatar">
+                          </div>
+                          <div class="ml-lg-4 ml-3">
+                            <div class="d-flex">
+                            <p class="mb-0 text-success mr-3 font-weight-bold">Elena</p> 
+                            <p class="pr-lg-5 mb-0">Lorem ipsum dolor sit amet.</p>
+                            </div>
+                            <small class="m-0 p-0 text-muted">Hace 40 minutos</small>
+                          </div>
+                        </div>
+                        <div class="d-flex container py-2">
+                            <div>
+                              <img src="../assets/img/avatar placeholder-7.png" alt="avatar">
+                            </div>
+                            <div class="ml-lg-4 ml-3">
+                              <div class="d-flex">
+                              <p class="mb-0 text-success mr-3 font-weight-bold">Elena</p> 
+                              <p class="pr-lg-5 mb-0">Lorem ipsum dolor sit amet.</p>
+                              </div>
+                              <small class="m-0 p-0 text-muted">Hace 40 minutos</small>
+                            </div>
+                          </div>
+                          <div class="container mt-3">
+                              <textarea class="form-control py-3 border-0" id="exampleTextarea" rows="1" placeholder="Escribe tu estado acá"></textarea>
+                          </div>
+                  </div>
+            </div>
+        </div> 
 
 <router-outlet></router-outlet>
+</div>

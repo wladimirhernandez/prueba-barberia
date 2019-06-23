@@ -1,1 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
+$green_main_color: #13B955;
+
+.main-inpt::-webkit-input-placeholder {
+	color: $green_main_color;
+}
