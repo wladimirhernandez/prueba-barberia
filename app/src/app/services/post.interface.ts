@@ -6,8 +6,8 @@ export interface IPost
         },
         date: number,
         text: string;
-        comments: IComments;
-        reactions: IReactions;
+        comments: IComments[];
+        reactions: IReactions[];
 
   }
 
@@ -18,7 +18,7 @@ export interface IPost
         image: string;
     },
     text: string;
-    date: 1516736063
+    date: number;
     }
 
     export interface IReactions
@@ -26,4 +26,19 @@ export interface IPost
             id: number;
             name: string;
             number: number;
+        }
+
+        export class IPostEmpy{
+            static empy() {
+                return {
+                    user: {
+                        name: '',
+                        image: '',
+                    },
+                    date: null,
+                    text: '',
+                    comments: [],
+                    reactions: []
+                } as IPost
+            }
         }

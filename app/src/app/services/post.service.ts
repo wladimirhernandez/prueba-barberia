@@ -17,7 +17,7 @@ export class PostService {
   All() {
     return this.http.get(this.URI)
     .pipe(
-      map((res: IPost) => {
+      map((res: IPost[]) => {
         return res ;
       })).toPromise();
   }

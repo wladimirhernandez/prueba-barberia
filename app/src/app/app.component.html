@@ -21,9 +21,9 @@
 </nav>
 <div class="py-5 container">
     <div class="card my-5">
-        <textarea class="form-control main-inpt py-3 border-0" id="exampleTextarea" rows="1" placeholder="Escribe tu estado acá"></textarea>        <hr class="m-0 p-0">
+        <textarea (keyup.enter)="addOrEdit()" [(ngModel)]="selectedPost.text" class="form-control main-inpt py-3 border-0" id="exampleTextarea" rows="1" placeholder="Escribe tu estado acá"></textarea>        <hr class="m-0 p-0">
         <div class="my-3 container d-md-flex justify-content-end d-none d-md-block">
-            <button class="btn btn-success col-lg-2 col-md-4">Publicar</button>
+            <button (click)="addOrEdit()" class="btn btn-success col-lg-2 col-md-4">Publicar</button>
         </div>
       </div>
       <div *ngFor="let postDetail of post; let l = count;" class="card my-5">
