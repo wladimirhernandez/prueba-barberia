@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { IPost } from './post.interface'
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +17,8 @@ export class PostService {
   All() {
     return this.http.get(this.URI)
     .pipe(
-      map((res) => {
-        return res;
+      map((res: IPost) => {
+        return res ;
       })).toPromise();
   }
 

@@ -26,21 +26,21 @@
             <button class="btn btn-success col-lg-2 col-md-4">Publicar</button>
         </div>
       </div>
-      <div class="card my-5">
+      <div *ngFor="let postDetail of post; let l = count;" class="card my-5">
           <div class="d-flex container py-3">
             <div>
               <img src="../assets/img/avatar placeholder-8.png" alt="avatar">
             </div>
             <div class="ml-lg-4 ml-3">
-              <h4 class="mb-0 text-success">Juan Rodriguez</h4>
-              <small class="text-muted">Hace 40 minutos</small>
-              <p class="pt-3 pr-lg-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima ea, corporis quaerat eos velit laudantium dolorem saepe animi dolore dolorum provident cum vitae. Totam rerum in tenetur consequuntur repudiandae reprehenderit.</p>
+              <h4 class="mb-0 text-success">{{ postDetail.user.name}}</h4>
+              <small class="text-muted">{{ postDetail.date}}</small>
+              <p class="pt-3 pr-lg-5">{{ postDetail.text}}</p>
             </div>
           </div>
           <hr class="m-0 p-0">
           <div class="py-3 container d-flex justify-content-between">
-              <div></div>
-              <p class="mb-0 text-muted">3 Comentarios</p>
+              <div><p class="mb-0 text-muted">{{postDetail.reactions.length}}</p></div>
+              <p class="mb-0 text-muted">{{postDetail.comments.length}} Comentarios</p>
             </div>
             <hr class="m-0 p-0">
 
@@ -49,42 +49,18 @@
               <button type="button" class="btn btn-outline-success btn-lg col-6 border-light">Comentar</button>
             </div>
             <div class="container bg-light py-3">
-                <div class="d-flex container py-2">
+                <div *ngFor="let postComments of postDetail.comments;" class="d-flex container py-2">
                     <div>
                       <img src="../assets/img/avatar placeholder-7.png" alt="avatar">
                     </div>
                     <div class="ml-lg-4 ml-3">
                       <div class="d-flex">
-                      <p class="mb-0 text-success mr-3 font-weight-bold">Elena</p> 
-                      <p class="pr-lg-5 mb-0">Lorem ipsum dolor sit amet.</p>
+                      <p class="mb-0 text-success mr-3 font-weight-bold">{{postComments.user.name }}</p> 
+                      <p class="pr-lg-5 mb-0">{{postComments.text}}</p>
                       </div>
-                      <small class="m-0 p-0 text-muted">Hace 40 minutos</small>
+                      <small class="m-0 p-0 text-muted">{{postComments.date}}</small>
                     </div>
                   </div>
-                      <div class="d-flex container py-2">
-                          <div>
-                            <img src="../assets/img/avatar placeholder-7.png" alt="avatar">
-                          </div>
-                          <div class="ml-lg-4 ml-3">
-                            <div class="d-flex">
-                            <p class="mb-0 text-success mr-3 font-weight-bold">Elena</p> 
-                            <p class="pr-lg-5 mb-0">Lorem ipsum dolor sit amet.</p>
-                            </div>
-                            <small class="m-0 p-0 text-muted">Hace 40 minutos</small>
-                          </div>
-                        </div>
-                        <div class="d-flex container py-2">
-                            <div>
-                              <img src="../assets/img/avatar placeholder-7.png" alt="avatar">
-                            </div>
-                            <div class="ml-lg-4 ml-3">
-                              <div class="d-flex">
-                              <p class="mb-0 text-success mr-3 font-weight-bold">Elena</p> 
-                              <p class="pr-lg-5 mb-0">Lorem ipsum dolor sit amet.</p>
-                              </div>
-                              <small class="m-0 p-0 text-muted">Hace 40 minutos</small>
-                            </div>
-                          </div>
                           <div class="container mt-3">
                               <textarea class="form-control py-3 border-0" id="exampleTextarea" rows="1" placeholder="Escribe tu estado acá"></textarea>
                           </div>
