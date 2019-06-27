@@ -1,4 +1,4 @@
-export interface IPost 
+export interface IPost
     {
         user: {
             name: string;
@@ -6,18 +6,19 @@ export interface IPost
         },
         date: number,
         text: string;
-        comments: IComments[];
+        comments: IComments[
+        ];
         reactions: IReactions[];
 
   }
 
-  export interface IComments
-  {
-    user: {
+export interface IComments
+{
+user: {
         name: string;
         image: string;
-    },
-    text: string;
+},
+text: string;
     date: number;
     }
 

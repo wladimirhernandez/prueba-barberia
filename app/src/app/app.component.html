@@ -33,7 +33,7 @@
             </div>
             <div class="ml-lg-4 ml-3">
               <h4 class="mb-0 text-success">{{ postDetail.user.name}}</h4>
-              <small class="text-muted">{{ postDetail.date}}</small>
+              <small class="text-muted">{{ postDetail.date |date: "medium" }}</small>
               <p class="pt-3 pr-lg-5">{{ postDetail.text}}</p>
             </div>
           </div>
@@ -55,18 +55,20 @@
                     </div>
                     <div class="ml-lg-4 ml-3">
                       <div class="d-flex">
-                      <p class="mb-0 text-success mr-3 font-weight-bold">{{postComments.user.name }}</p> 
+                      <p class="mb-0 text-success mr-3 font-weight-bold">{{postComments.user.name }}</p>
                       <p class="pr-lg-5 mb-0">{{postComments.text}}</p>
                       </div>
-                      <small class="m-0 p-0 text-muted">{{postComments.date}}</small>
+                      <small class="m-0 p-0 text-muted">{{postComments.date | date:"medium" }}</small>
                     </div>
                   </div>
-                          <div class="container mt-3">
-                              <textarea class="form-control py-3 border-0" id="exampleTextarea" rows="1" placeholder="Escribe tu estado acá"></textarea>
+                          <div class="container mt-3" >
+                              <form  [formGroup]="mForma">
+                                <textarea class="form-control py-3 border-0" [(ngModel)]="commentText" id="exampleTextarea" rows="1" placeholder="Escribe tu estado acá" formControlName="text"  (keyup.enter)="addOrEditComments(postDetail)"></textarea>
+                            </form>
                           </div>
                   </div>
             </div>
-        </div> 
+        </div>
 
 <router-outlet></router-outlet>
 </div>
